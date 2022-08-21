@@ -1,0 +1,36 @@
+
+
+#container{
+    /* grid-gap: 10px; */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "h h f f s s"
+"h h f f s s"
+"h h . . s s"
+"h h m m s s"
+"h h m m s s"
+}
+
+.head{
+    grid-area: h;
+    background-color: yellow;
+}
+
+.side-nav{
+    grid-area: s;
+    background-color: red;
+
+}
+
+.main{
+    grid-area: m;
+    background-color: aqua;
+}
+
+.foot{
+    grid-area: f;
+    background-color:grey;
+}

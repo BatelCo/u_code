@@ -1,0 +1,24 @@
+#container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 18fr 1fr;
+    grid-template-areas:
+    "s m"
+    "s f";
+}
+
+.side-nav{
+    grid-area: s;
+    background-color: rgb(154, 2, 165);
+}
+.main{
+    grid-area: m;
+    background-color: rgb(199, 206, 206);
+}
+.foot{
+    grid-area: f;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 1fr 4fr;
+}
+.foot >
