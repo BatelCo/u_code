@@ -26,11 +26,53 @@ $(".box").hover(function () {
 })
 
 //ex4
-$(".item").click(function () {
+// $(".item").click(function () {
 
+//     if ($(this).data().instock) {
+//         $("#cart").append(`<div class="cart-item">${$(this).text()}</div>`)
+//     }
+// })
+
+// extention cart
+let melonCounter = 1
+let shoeCounter = 1
+
+
+$(".item").click(function () {
     if ($(this).data().instock) {
-        $("#cart").append(`<div class="cart-item">${$(this).text()}</div>`)
+        if ($(this).text() === "Shoe") {
+            if (shoeCounter === 1) {
+                $("#cart").append(`<div class="cart-item shoe">${$(this).text()}</div>`)
+                shoeCounter++
+            } else {
+                $(".shoe").remove()
+                $("#cart").append(`<div class="cart-item shoe">${$(this).text()} x${shoeCounter}</div>`)
+                shoeCounter++
+            }
+        } else if ($(this).text() === "Melon") {
+            if (melonCounter === 1) {
+                $("#cart").append(`<div class="cart-item melon">${$(this).text()}</div>`)
+                melonCounter++
+            } else {
+                $(".melon").remove()
+                $("#cart").append(`<div class="cart-item melon">${$(this).text()} x${melonCounter}</div>`)
+                melonCounter++
+            }
+        }
     }
+})
+
+
+$("#cart").on("click", ".cart-item", function () {
+    $(this).remove()
+})
+
+$("#cart").on("click", ".cart-item", function () {
+    $(this).remove()
+})
+
+$("#cart").on("click", ".cart-item", function () {
+    $(this).remove()
 })
 
 //ex5
@@ -59,6 +101,8 @@ for (let $span of $spans) {
 
     $($span).on("click", function () {
         const color = $($span).data().color
-        $(".box").css("background-color", color)
+        $(".box1").css("background-color", color)
     })
 }
+
+
