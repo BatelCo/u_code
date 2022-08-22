@@ -37,7 +37,6 @@ $(".box").hover(function () {
 let melonCounter = 1
 let shoeCounter = 1
 
-
 $(".item").click(function () {
     if ($(this).data().instock) {
         if ($(this).text() === "Shoe") {
