@@ -1,0 +1,22 @@
+.headline {
+  margin: 0;
+  padding: 10px;
+}
+.login-div,
+.account-div {
+  width: 200px;
+  height: 200px;
+  background-color: #ae0000;
+  box-shadow: 1px 1px 3px #2c3e50;
+  border-radius: 4px;
+}
+.account-div {
+  height: 100px;
+  background-color: #7d0000;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

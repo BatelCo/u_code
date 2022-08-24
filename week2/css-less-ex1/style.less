@@ -1,0 +1,40 @@
+
+.headline {
+    margin: 0;
+    padding: 10px;
+}
+
+.login-div {
+    width: 200px;
+    height: 200px;
+    background-color: #ae0000;
+    box-shadow: 1px 1px 3px #2c3e50;
+    border-radius: 4px;
+}
+
+.account-div {
+    &:extend(.login-div);
+    height: 100px;
+    background-color: #7d0000;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+    flex-direction: column;
+
+}
+
+// .box(@w, @h) {
+//     width: @w;
+//     height: @h;
+//     background-color: #9b59b6;
+//     box-shadow: 1px 1px 3px #2c3e50;
+//     border-radius: 4px;
+// }
+
+// .other-container {
+//     .box(50px, 50px);
+//     margin-top: 1vmax;
+// }
