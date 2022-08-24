@@ -69,3 +69,5 @@ $('.validator').on('click', function () {
     let QR = $(this).closest(".computer").find(".QR").text()
     console.log(QR);
 })
+//closest up 
+//find down
