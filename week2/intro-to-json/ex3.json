@@ -1,0 +1,80 @@
+[
+    {
+        "animalName": "cow",
+        "weight": [
+            {
+                "count": 1000,
+                "unit": "kg"
+            }
+        ],
+        "whereLive": "georgia",
+        "endangered": false,
+        "foods": [
+            {
+                "food": "grass",
+                "percent": "50%"
+            },
+            {
+                "food": "food",
+                "percent": "50%"
+            }
+        ],
+        "eatenBy": [
+            "humens",
+            "lion"
+        ],
+        "deliciousness": 5
+    },
+    {
+        "animalName": "cow",
+        "weight": [
+            {
+                "count": 1000,
+                "unit": "kg"
+            }
+        ],
+        "whereLive": "georgia",
+        "endangered": false,
+        "foods": [
+            {
+                "food": "grass",
+                "percent": "50%"
+            },
+            {
+                "food": "food",
+                "percent": "50%"
+            }
+        ],
+        "eatenBy": [
+            "humens",
+            "lion"
+        ],
+        "deliciousness": 5
+    },
+    {
+        "animalName": "cow",
+        "weight": [
+            {
+                "count": 1000,
+                "unit": "kg"
+            }
+        ],
+        "whereLive": "georgia",
+        "endangered": false,
+        "foods": [
+            {
+                "food": "grass",
+                "percent": "50%"
+            },
+            {
+                "food": "food",
+                "percent": "50%"
+            }
+        ],
+        "eatenBy": [
+            "humens",
+            "lion"
+        ],
+        "deliciousness": 5
+    }
+]
