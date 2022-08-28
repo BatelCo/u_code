@@ -1,20 +1,97 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <h1>handlebars</h1>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/x.y.z/handlebars.min.js"></script>
-    <script type="text/javascript" src=jquery-3.6.0.js></script>
+    <script id="post-template" type="text/x-handlebars-template">
+        <div class="post">
+          <a href="#" class="remove">remove</a> 
+          <a href="#" class="show-comments">comments</a> 
+          {{ post.text }}
+          <div class="comments-container">
+            <div class="comments-list">
+            <input type="text" class="comment-name"/>
+            <button class="btn btn-primary add-comment">Post Comment</button> 
+          </div>
+        </div>
+      </script>
+    <div>hello </div>
+    <div class="posts"></div>
+
+    <script id="menu-template" type="text/x-handlebars-template">
+        <ul>
+          {{#each menu}}
+            <li><a href="{{link}}">{{name}}</a></li>
+          {{/each}}
+        </ul>
+      </script>
+
+    <!-- <div class="menu">
+    </div> -->
+
+    <script id="student-template" type="text/x-handlebars-template">
+        <ul>
+          {{#each classmates}}
+            <div>{{name}}</div>
+            <div>{{description}}</div>
+          {{/each}}
+        </ul>
+      </script>
+
+    <div class="students">
+    </div>
+    <script id="menu-template-with-if" type="text/x-handlebars-template">
+        <ul>
+          {{#each menu}}
+            {{#if socialNetwork}}
+            <li><a href="{{link}}">{{name}}</a></li>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </script>
+
+    <div class="menu">
+    </div>
+    <script id="first-template" type="text/x-handlebars-template">
+        My text: {{text}}
+      </script>
+
+    <div id="normal">Regular HTML Stuff</div>
+
+    <script id="second-template" type="text/x-handlebars-template">
+      My HB text: {{moreText}}
+      </script>
+
+    <p id="special"></p>
+
+    <script id="animals-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each animals }}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </script>
+
+    <p class="animals"></p>
+    <script id="languages-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each languages}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </script>
+
+    <p class="languages"></p>
+
+
     <script src="main.js"></script>
 </body>
 
