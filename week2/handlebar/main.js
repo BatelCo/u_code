@@ -79,3 +79,4 @@ const renderLanguages = function () {
 
 renderAnimals();
 renderLanguages();
+
