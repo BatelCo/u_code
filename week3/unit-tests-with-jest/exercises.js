@@ -28,8 +28,6 @@ class Exercises {
         const trueArr = arr.filter(a => a === true)
         const falseArr = arr.filter(a => a === false)
         return trueArr.length > falseArr.length
-
-
     }
 
     // extention

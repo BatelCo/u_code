@@ -3,31 +3,22 @@ const exercises = new EX()
 
 // ex1
 test("isEven should return true if n is evens", function () {
-
     expect(exercises.isEven(4)).toBeTruthy()
     expect(exercises.isEven(5)).toBeFalsy()
-
-
-    // expect(exercises.isEven(5))
-
 })
 
 // ex2
 test("removeAtLeastOne should remove at least one element from the array `arr`", function () {
     const arr = [1, 2, 3, 4, 5]
     let length = arr.length
-
     expect(exercises.removeAtLeastOne(arr).length).toBeLessThan(length)
-
 })
 
 // ex3
 test("simplify should return a clean string without these symbols:! # . , ", function () {
     const str1 = "nir#"
     const str2 = "nir"
-
     expect(exercises.simplify(str1)).toMatch(str2)
-
 })
 
 // ex4

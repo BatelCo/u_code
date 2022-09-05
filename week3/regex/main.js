@@ -62,13 +62,15 @@ console.log(searchMatchingRegex(ex2str3)) //return false
 const email1 = "cat@meow.com"
 const email2 = "bad1npuT!@gmail.com"
 const email3 = "meow@gmail.net"
-const emailReg = /k/
+const emailReg = /^[a-z]+.com$/
+
 const emailValidator = function (str) {
     /**
      * HINT : doesnt have to be a big regex expression use the methods from RegExp
      */
     return str.match(emailReg) != null
 }
+
 console.log('EX3');
 console.log(emailValidator(email1)) //return true
 console.log(emailValidator(email2)) //return true
