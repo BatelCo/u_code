@@ -6,3 +6,4 @@ function initPage() {
         console.log(e.value);
     });
 }
+//kk
