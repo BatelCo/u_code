@@ -37,6 +37,7 @@ var classData = {
 // // append our new html to the page
 // $(".students").append(newHTML);
 const renderFirst = function () {
+    $("#results").empty()
     const source = $("#first-template").html();
     const template = Handlebars.compile(source);
     let newHTML = template({ text: "This gets rendered" });
@@ -63,6 +64,7 @@ const animals = [
 ];
 
 const languages = ["French", "Spanish", "Togolese", "Javascript", "Uruk"];
+
 const renderAnimals = function () {
     const source = $("#animals-template").html();
     const template = Handlebars.compile(source);
