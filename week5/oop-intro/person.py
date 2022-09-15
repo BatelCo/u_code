@@ -11,3 +11,4 @@ p1 = Person("Jezrien", 102)
 p2 = Person("Tal", 96)
 p1.introduce()  # outputs: Hi there, I am Jezerien
 p2.introduce()  # outputs: Hi there, I am Tal
+p3 = Person()
