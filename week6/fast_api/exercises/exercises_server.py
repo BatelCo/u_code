@@ -11,8 +11,7 @@ app = FastAPI()
 print("server")
 
 if __name__ == "__main__":
-    uvicorn.run("exercises_server:app",
-                host="127.0.0.1", port=3000, reload=True)
+    uvicorn.run("exercises_server:app", host="127.0.0.1", port=3000, reload=True)
 
 
 @app.get("/")
@@ -20,8 +19,6 @@ async def root():
     return {"message": "Hello from exercises"}
 
 #  ex1 part A
-
-
 @app.get('/sanity')
 def sanity():
     return "Server is up and running smoothly"
@@ -31,12 +28,9 @@ def sanity():
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # ex2
-
-
 @ app.get("/store/{name}")
 async def get_item_price(name):
-    item_name_price = [{"price": item["price"]}
-                       for item in store if item["name"] == name]
+    item_name_price = [{"price": item["price"]} for item in store if item["name"] == name]
     return item_name_price[0] if (len(item_name_price) > 0) else {"price": None}
 
 
