@@ -49,6 +49,5 @@ async def reduce_inventory(furniture_name):
 async def sale(is_admin):
     if (bool(is_admin)):
         for item in store:
-            item["price"] = item["price"] * \
-                0.5 if item["inventory"] > 10 else item["price"]
+            item["price"] = item["price"] * 0.5 if item["inventory"] > 10 else item["price"]
     return store
