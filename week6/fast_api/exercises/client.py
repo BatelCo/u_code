@@ -18,18 +18,15 @@ class Client:
         name = res.json()["name"]
         price = res.json()["price"]
         inventory = res.json()["inventory"]
-        print(
-            f"Congratulations, you've just bought {name} for {price}. There are {inventory} left now in the store.")
+        print(f"Congratulations, you've just bought {name} for {price}. There are {inventory} left now in the store.")
 
 
 client = Client(200)
 
-
-def get_item_by_user():  # ex3
+def get_item_by_user():# ex3
     print('Enter furniture name:')
     furniture_name = input()
     print(client.get_furniture_price(furniture_name))
-
 
 def user_buy():  # ex5 +  Extension 1
     print('What furniture do you want to buy?')
@@ -40,7 +37,6 @@ def user_buy():  # ex5 +  Extension 1
         client.money = client.money - furniture_price
     else:
         print("you should get a job")
-
 
 get_item_by_user()
 user_buy()
