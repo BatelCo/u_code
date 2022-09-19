@@ -56,8 +56,9 @@ async def reduce_inventory(name):
             return item
 
 
+# http://localhost:3000/sale/?is_admin=true
 # ex6
-@ app.get("/sale/{is_admin}")
+@ app.get("/sale/")
 async def sale(is_admin):
     if (is_admin == "true"):
         for item in store:
