@@ -1,4 +1,4 @@
-#  exercises.py (the server)
+#  exercises_server.py (the server)
 
 import requests
 from fastapi.responses import FileResponse
@@ -13,7 +13,8 @@ app = FastAPI()
 print("server")
 
 if __name__ == "__main__":
-    uvicorn.run("exercises:app", host="127.0.0.1", port=3000, reload=True)
+    uvicorn.run("exercises_server:app",
+                host="127.0.0.1", port=3000, reload=True)
 
 
 @app.get("/")

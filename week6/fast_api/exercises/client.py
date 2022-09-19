@@ -8,14 +8,15 @@ import requests
 def get_furniture_price(furniture_name):
     res = requests.get(
         'http://localhost:3000/store/{}'.format(furniture_name))
-    print(res.json())
+    return (res.json())
 
 
 print('Enter furniture name:')
 furniture_name = input()
-get_furniture_price(furniture_name)
+print(get_furniture_price(furniture_name))
 
-# ex5
+# ex5 +  Extension 1
+money = 200
 
 
 def buy_furniture(furniture_name):
@@ -30,4 +31,9 @@ def buy_furniture(furniture_name):
 
 print('What furniture do you want to buy?')
 furniture_name = input()
-buy_furniture(furniture_name)
+furniture_price = get_furniture_price(furniture_name)["price"]
+if (money >= furniture_price):
+    buy_furniture(furniture_name)
+    money = money - furniture_price
+else:
+    print("you should get a job")
