@@ -23,15 +23,11 @@ def get_word_count(word):
         return {"count": value}
     return {"count" : 0}
 
-# extention
 def update_word_counter(word):
-    
-    ignore_case_word = word.lower()
-
-    if ignore_case_word in word_counter:
-        word_counter[ignore_case_word] += 1
+    if word in word_counter:
+        word_counter[word] += 1
     else:
-        word_counter[ignore_case_word] = 1 
+        word_counter[word] = 1 
 
 # ex3 + ex4
 # http://localhost:8000/add?sentence=orya nir batel
