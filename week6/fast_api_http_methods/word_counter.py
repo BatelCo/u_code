@@ -23,11 +23,16 @@ def get_word_count(word):
         return {"count": value}
     return {"count" : 0}
 
+# extension 1
+def ignore_special_chars(word):
+    return "".join(re.findall(r"[a-z]", word))
+
 def update_word_counter(word):
-    if word in word_counter:
-        word_counter[word] += 1
+    clean_word = ignore_special_chars(word.lower())
+    if clean_word in word_counter:
+        word_counter[clean_word] += 1
     else:
-        word_counter[word] = 1 
+        word_counter[clean_word] = 1 
 
 # ex3 + ex4
 # http://localhost:8000/add?sentence=orya nir batel
