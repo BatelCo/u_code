@@ -38,11 +38,13 @@ async def add_word(word=None, sentence=None):
         return{"text": f"Added {word}", "currentCount": word_counter[word] }
     if sentence is not None:
         words = sentence.split()
-        numOldWords = len(word_counter)
+        num_old_words = len(word_counter)
         for word in words:
             update_word_counter(word)
-        numNewWords = len(word_counter)
-        return {"text": f"Added {numNewWords-numOldWords} words, {numOldWords} already existed"}
+        words_num_after_apdate = len(word_counter)
+        added_word_number = words_num_after_apdate - num_old_words
+        alredy_exist = len(words) - added_word_number 
+        return {"text": f"Added {added_word_number} words, {alredy_exist} already existed"}
 
 # ex5
 @app.delete('/delete/{word}' )
