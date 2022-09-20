@@ -71,6 +71,8 @@ print(next(iterator))
 print(next(iterator))
 print(next(iterator))
 
+# incorrect implementation becwase return self its update self
+
 
 class PrintNumbers:
     def __init__(self, size):
@@ -88,7 +90,14 @@ class PrintNumbers:
         self.counter += 1
         return self.numbers[self.counter]
 
-# generator
+
+iterable = PrintNumbers(3)
+for num in iterable:
+    print(num)
+
+# generator - generate the next value only when I ask(when i do next)
+# save memory. generator is iterator
+# yield - return i and remember where the function was
 
 
 def plus1(stop):
