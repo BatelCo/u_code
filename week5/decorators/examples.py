@@ -17,6 +17,7 @@ def just_print():
 
 just_print()
 print(just_print.__name__)
+print()
 
 
 # print args
@@ -52,4 +53,4 @@ add2(1, 2)
 add3(1, 2, 3)
 add4(1, 2, 2, 4)
 
-print(add2(1, 2))
+# print(add2(1, 2))
