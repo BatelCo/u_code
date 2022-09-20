@@ -1,3 +1,4 @@
+from unittest.util import sorted_list_difference
 from xml.dom import NotFoundErr
 from fastapi import FastAPI
 import uvicorn
@@ -5,6 +6,7 @@ from fastapi import Request
 from fastapi import status, Response
 from data import word_counter
 import re
+import operator
 
 app = FastAPI()
 
@@ -58,6 +60,24 @@ async def delete_word(word, response: Response):
         response.status_code = status.HTTP_404_NOT_FOUND
         return {"text": f"{word} is not a key"}
 
+# extension 2
+@app.get('/mostPopular')
+def most_popular_word():
+    max_word = max(word_counter, key=word_counter.get)
+    word_value = max(word_counter.values())
+    return{"text":max_word, "count":word_value }
+
+# extension 3
+@app.get('/topFive')
+def top_five_popular():
+    top_five_popular = (sorted(word_counter.items(), key=operator.itemgetter(1),reverse=True))[:5]
+    print(top_five_popular)
+    return {"ranking" : top_five_popular}
+
+# extension 4
+@app.get('/totalCount')
+def total_count():
+        return{"text":"Total count", "count": sum(word_counter.values()) }
 
 
 if __name__ == "__main__":
