@@ -1,0 +1,12 @@
+git add .
+git commit -m "great code"
+git push origin master
+
+git branch commands - solo project:
+
+
+git branch
+git checkout -b branch-name
+git push origin branch-name_
+git checkout branch-name
+git merge branch-name
