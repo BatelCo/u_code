@@ -78,12 +78,29 @@ if connection.open:
 
 
 # ex2
-def ex2(category_name):
+# def ex2(category_name):
+#     try:
+#         with connection.cursor() as cursor:
+            
+#             query = f'''
+#             SELECT * FROM products WHERE category = "{category_name}"
+#             '''
+#             cursor.execute(query)
+#             results = cursor.fetchall()
+#             connection.commit()
+#             return results
+#     except:
+#         print("DB Error")
+
+# print(ex2("Meat"))
+
+
+def ex3(id):
     try:
         with connection.cursor() as cursor:
             
             query = f'''
-            SELECT * FROM products WHERE category = "{category_name}"
+            SELECT * FROM products WHERE id = {id}
             '''
             cursor.execute(query)
             results = cursor.fetchall()
@@ -92,4 +109,4 @@ def ex2(category_name):
     except:
         print("DB Error")
 
-print(ex2("Meat"))
+print(ex3(1))
